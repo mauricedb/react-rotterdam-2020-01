@@ -1,0 +1,292 @@
+[
+  {
+    "type": "openFile",
+    "path": "src/App.tsx"
+  },
+  {
+    "type": "goto",
+    "line": 3
+  },
+  {
+    "type": "command",
+    "command": "editor.action.commentLine"
+  },
+  {
+    "type": "goto",
+    "line": 4
+  },
+  {
+    "type": "typeText",
+    "text": [
+      "import Loading from \"./components/loading\";",
+      "",
+      "const Jokes = React.lazy(() => import(\"./components/jokes\"));",
+      ""
+    ]
+  },
+  {
+    "type": "goto",
+    "line": 1,
+    "column": 13
+  },
+  {
+    "type": "typeText",
+    "text": [", { Suspense }"]
+  },
+  {
+    "type": "goto",
+    "line": 12,
+    "column": 999
+  },
+  {
+    "type": "typeText",
+    "text": ["", "     <Suspense fallback={<Loading />}>"]
+  },
+  {
+    "type": "wait",
+    "delay": 250
+  },
+  {
+    "type": "typeText",
+    "text": ["", ""]
+  },
+  {
+    "type": "command",
+    "command": "editor.action.moveLinesDownAction",
+    "repeat": 20
+  },
+  {
+    "type": "wait",
+    "delay": "manual",
+    "save": true
+  },
+
+  {
+    "type": "createFile",
+    "path": "src/components/create-resource.ts"
+  },
+  {
+    "type": "typeText",
+    "text": [
+      "function createResource(load: (...args: any[]) => Promise<any>) {",
+      "  let promise: Promise<any> | null = null;",
+      "  let result: any = undefined;",
+      "  let error: any = undefined;",
+      "",
+      "  async function executeLoad(...args: any[]) {",
+      "    try {",
+      "      result = await load(...args);",
+      "    } catch (err) {",
+      "      error = err;",
+      "    }",
+      "  }",
+      "",
+      "  return {",
+      "    read(...args: any[]) {",
+      "      if (!promise) {",
+      "        promise = executeLoad(...args);",
+      "      }",
+      "",
+      "      if (result !== undefined) {",
+      "        return result;",
+      "      } else if (error !== undefined) {",
+      "        throw error;",
+      "      } else {",
+      "        throw promise;",
+      "      }",
+      "    }",
+      "  };",
+      "}",
+      "",
+      "export default createResource;"
+    ]
+  },
+  {
+    "type": "wait",
+    "delay": "manual",
+    "save": true
+  },
+  {
+    "type": "command",
+    "command": "workbench.action.closeActiveEditor"
+  },
+
+  {
+    "type": "createFile",
+    "path": "src/components/jokes-resource.ts"
+  },
+  {
+    "type": "typeText",
+    "text": [
+      "import createResource from \"./create-resource\";",
+      "",
+      "const jokesResource = createResource(async (url: string) => {",
+      "  const rsp = await fetch(url);",
+      "  const jokes = await rsp.json();",
+      "",
+      "  return jokes;",
+      "});",
+      "",
+      "export default jokesResource;"
+    ]
+  },
+  {
+    "type": "wait",
+    "delay": "manual",
+    "save": true
+  },
+
+  {
+    "type": "command",
+    "command": "workbench.action.closeActiveEditor"
+  },
+
+  {
+    "type": "openFile",
+    "path": "src/components/jokes.tsx"
+  },
+  {
+    "type": "goto",
+    "line": 4
+  },
+  {
+    "type": "typeText",
+    "text": ["import jokesResource from \"./jokes-resource\";", ""]
+  },
+  {
+    "type": "goto",
+    "line": 2
+  },
+  {
+    "type": "command",
+    "command": "cursorDownSelect",
+    "repeat": 2
+  },
+  {
+    "type": "command",
+    "command": "editor.action.clipboardCutAction"
+  },
+  {
+    "type": "goto",
+    "line": 8
+  },
+  {
+    "type": "command",
+    "command": "cursorDownSelect",
+    "repeat": 5
+  },
+  {
+    "type": "command",
+    "command": "editor.action.clipboardCutAction"
+  },
+  {
+    "type": "typeText",
+    "text": ["  const jokes = jokesResource.read(url) as Joke[];", ""]
+  },
+  {
+    "type": "wait",
+    "delay": "manual",
+    "save": true
+  },
+
+  {
+    "type": "openFile",
+    "path": "src/App.tsx"
+  },
+  {
+    "type": "goto",
+    "line": 1,
+    "column": 25
+  },
+  {
+    "type": "typeText",
+    "text": [", StrictMode"]
+  },
+  {
+    "type": "goto",
+    "line": 12,
+    "column": 999
+  },
+  {
+    "type": "typeText",
+    "text": ["", "   <StrictMode>"]
+  },
+  {
+    "type": "wait",
+    "delay": 250
+  },
+  {
+    "type": "typeText",
+    "text": ["", ""]
+  },
+  {
+    "type": "command",
+    "command": "editor.action.moveLinesDownAction",
+    "repeat": 22
+  },
+  {
+    "type": "wait",
+    "delay": "manual",
+    "save": true
+  },
+
+  {
+    "type": "openFile",
+    "path": "src/index.tsx"
+  },
+  {
+    "type": "goto",
+    "line": 8
+  },
+  {
+    "type": "command",
+    "command": "editor.action.commentLine"
+  },
+  {
+    "type": "goto",
+    "line": 9
+  },
+  {
+    "type": "typeText",
+    "text": ["ReactDOM.createRoot(root!).render(<App />);", ""]
+  },
+  {
+    "type": "wait",
+    "delay": "manual",
+    "save": true
+  },
+
+  {
+    "type": "openFile",
+    "path": "src/App.tsx"
+  },
+  {
+    "type": "goto",
+    "line": 5
+  },
+  {
+    "type": "typeText",
+    "text": ["", "import { unstable_next } from \"scheduler\";", ""]
+  },
+  {
+    "type": "goto",
+    "line": 22,
+    "column": 999
+  },
+  {
+    "type": "command",
+    "command": "editor.action.commentLine"
+  },
+  {
+    "type": "typeText",
+    "text": [
+      "",
+      "                onChange={() => unstable_next(() => setDisplayJokes(!displayJokes)) }",
+      ""
+    ]
+  },
+  {
+    "type": "command",
+    "command": "workbench.action.files.save"
+  }
+]

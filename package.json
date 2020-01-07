@@ -10,9 +10,10 @@
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
+    "react": "^0.0.0-experimental-f42431abe",
+    "react-dom": "^0.0.0-experimental-f42431abe",
     "react-scripts": "3.3.0",
+    "scheduler": "^0.0.0-experimental-f42431abe",
     "typescript": "~3.7.2"
   },
   "scripts": {
@@ -35,5 +36,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/scheduler": "^0.16.1"
   }
 }
