@@ -13,7 +13,7 @@
   },
   {
     "type": "goto",
-    "line": 4
+    "line": 5
   },
   {
     "type": "typeText",
@@ -35,7 +35,7 @@
   },
   {
     "type": "goto",
-    "line": 12,
+    "line": 26,
     "column": 999
   },
   {
@@ -53,9 +53,10 @@
   {
     "type": "command",
     "command": "editor.action.moveLinesDownAction",
-    "repeat": 20
+    "repeat": 2
   },
   {
+    "skip": true,
     "type": "wait",
     "delay": "manual",
     "save": true
@@ -184,6 +185,7 @@
     "text": ["  const jokes = jokesResource.read(url) as Joke[];", ""]
   },
   {
+    "skip": true,
     "type": "wait",
     "delay": "manual",
     "save": true
@@ -222,9 +224,10 @@
   {
     "type": "command",
     "command": "editor.action.moveLinesDownAction",
-    "repeat": 22
+    "repeat": 29
   },
   {
+    "skip": true,
     "type": "wait",
     "delay": "manual",
     "save": true
@@ -251,6 +254,7 @@
     "text": ["ReactDOM.createRoot(root!).render(<App />);", ""]
   },
   {
+    "skip": true,
     "type": "wait",
     "delay": "manual",
     "save": true

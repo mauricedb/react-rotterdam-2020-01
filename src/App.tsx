@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import Jokes from "./components/jokes";
+import ChuckJokes from "./components/chuck-jokes";
 
 const App: React.FC = () => {
   const [displayJokes, setDisplayJokes] = React.useState(false);
@@ -18,7 +19,12 @@ const App: React.FC = () => {
           Display jokes
         </label>
       </div>
-      {displayJokes && <Jokes url="/api/jon-skeet.json" />}
+      {displayJokes && (
+        <>
+          <Jokes url="/api/jon-skeet.json" />
+          {/* <ChuckJokes delay={2000} /> */}
+        </>
+      )}
       <div>
         <a
           href="http://timeslicing-unstable-demo.surge.sh/"

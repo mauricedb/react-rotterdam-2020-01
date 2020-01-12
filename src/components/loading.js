@@ -1,8 +1,12 @@
-import React from 'react';
-import classes from './loading.module.css';
+import React from "react";
+import { PacmanLoader } from "react-spinners";
 
 const Loading = () => {
-  return <div className={classes.loading} />;
+  return (
+    <div style={{ height: 50 }}>
+      <PacmanLoader />
+    </div>
+  );
 };
 
 export default Loading;

@@ -13,6 +13,7 @@
     "react": "^0.0.0-experimental-f42431abe",
     "react-dom": "^0.0.0-experimental-f42431abe",
     "react-scripts": "3.3.0",
+    "react-spinners": "^0.8.0",
     "scheduler": "^0.0.0-experimental-f42431abe",
     "typescript": "~3.7.2"
   },
