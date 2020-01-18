@@ -310,6 +310,92 @@
     ]
   },
   {
+    "type": "wait",
+    "delay": "manual",
+    "save": true
+  },
+
+  {
+    "type": "openFile",
+    "path": "src/App.tsx"
+  },
+  {
+    "type": "goto",
+    "line": 32,
+    "column": 999
+  },
+  {
+    "type": "typeText",
+    "text": [
+      "",
+      "            </Suspense>",
+      "<Suspense fallback={<Loading />}>",
+      ""
+    ]
+  },
+  {
+    "type": "wait",
+    "delay": "manual",
+    "save": true
+  },
+
+  {
+    "type": "openFile",
+    "path": "src/App.tsx"
+  },
+  {
+    "type": "goto",
+    "line": 1,
+    "column": 52
+  },
+  {
+    "type": "typeText",
+    "text": [", SuspenseList"]
+  },
+  {
+    "type": "goto",
+    "line": 29,
+    "column": 999
+  },
+  {
+    "type": "typeText",
+    "text": ["", "            <SuspenseList revealOrder=\"forwards\">"]
+  },
+  {
+    "type": "wait",
+    "delay": 250
+  },
+  {
+    "type": "typeText",
+    "text": ["", ""]
+  },
+  {
+    "type": "command",
+    "command": "editor.action.moveLinesDownAction",
+    "repeat": 8
+  },
+
+  {
+    "type": "wait",
+    "delay": "manual",
+    "save": true
+  },
+
+  {
+    "type": "openFile",
+    "path": "src/App.tsx"
+  },
+  {
+    "type": "goto",
+    "line": 35,
+    "column": 47
+  },
+  {
+    "type": "typeText",
+    "text": [" tail=\"collapsed\""]
+  },
+
+  {
     "type": "command",
     "command": "workbench.action.files.save"
   }
