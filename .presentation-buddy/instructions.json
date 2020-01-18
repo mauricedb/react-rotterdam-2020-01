@@ -35,12 +35,12 @@
   },
   {
     "type": "goto",
-    "line": 26,
+    "line": 25,
     "column": 999
   },
   {
     "type": "typeText",
-    "text": ["", "     <Suspense fallback={<Loading />}>"]
+    "text": ["", "            <Suspense fallback={<Loading />}>"]
   },
   {
     "type": "wait",
@@ -224,7 +224,7 @@
   {
     "type": "command",
     "command": "editor.action.moveLinesDownAction",
-    "repeat": 29
+    "repeat": 28
   },
   {
     "skip": true,
@@ -265,16 +265,36 @@
     "path": "src/App.tsx"
   },
   {
+    "skip": true,
     "type": "goto",
     "line": 5
   },
   {
+    "skip": true,
     "type": "typeText",
     "text": ["", "import { unstable_next } from \"scheduler\";", ""]
   },
   {
     "type": "goto",
-    "line": 22,
+    "line": 1,
+    "column": 37
+  },
+  {
+    "type": "typeText",
+    "text": [", useTransition"]
+  },
+  {
+    "type": "goto",
+    "line": 10,
+    "column": 999
+  },
+  {
+    "type": "typeText",
+    "text": ["", "  const [startTransition] = useTransition();"]
+  },
+  {
+    "type": "goto",
+    "line": 20,
     "column": 999
   },
   {
@@ -285,7 +305,7 @@
     "type": "typeText",
     "text": [
       "",
-      "                onChange={() => unstable_next(() => setDisplayJokes(!displayJokes)) }",
+      "                onChange={(e) => startTransition(() => setDisplayJokes(e.target.checked)) }",
       ""
     ]
   },
