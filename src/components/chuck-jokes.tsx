@@ -5,7 +5,7 @@ type Joke = { id: number; joke: string };
 type ChuckJokesProps = { delay: number };
 
 const ChuckJokes: React.FC<ChuckJokesProps> = ({ delay }) => {
-  const jokes = chuckJokesResource.read("/api/jon-skeet.json", delay) as Joke[];
+  const jokes = chuckJokesResource.read("/api/chuck-norris.json", delay) as Joke[];
 
   return (
     <div>
