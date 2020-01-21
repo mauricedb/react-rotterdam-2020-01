@@ -56,7 +56,6 @@
     "repeat": 2
   },
   {
-    "skip": true,
     "type": "wait",
     "delay": "manual",
     "save": true
@@ -185,7 +184,6 @@
     "text": ["  const jokes = jokesResource.read(url) as Joke[];", ""]
   },
   {
-    "skip": true,
     "type": "wait",
     "delay": "manual",
     "save": true
@@ -227,7 +225,6 @@
     "repeat": 28
   },
   {
-    "skip": true,
     "type": "wait",
     "delay": "manual",
     "save": true
@@ -254,7 +251,6 @@
     "text": ["ReactDOM.createRoot(root!).render(<App />);", ""]
   },
   {
-    "skip": true,
     "type": "wait",
     "delay": "manual",
     "save": true
@@ -263,16 +259,6 @@
   {
     "type": "openFile",
     "path": "src/App.tsx"
-  },
-  {
-    "skip": true,
-    "type": "goto",
-    "line": 5
-  },
-  {
-    "skip": true,
-    "type": "typeText",
-    "text": ["", "import { unstable_next } from \"scheduler\";", ""]
   },
   {
     "type": "goto",
