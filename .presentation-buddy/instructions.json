@@ -236,7 +236,7 @@
   },
   {
     "type": "goto",
-    "line": 8
+    "line": 9
   },
   {
     "type": "command",
@@ -244,11 +244,12 @@
   },
   {
     "type": "goto",
-    "line": 9
+    "line": 9,
+    "column": 999
   },
   {
     "type": "typeText",
-    "text": ["ReactDOM.createRoot(root!).render(<App />);", ""]
+    "text": ["", "  ReactDOM.createRoot(root).render(<App />);", ""]
   },
   {
     "type": "wait",
