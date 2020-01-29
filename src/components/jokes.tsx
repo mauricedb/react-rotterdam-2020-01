@@ -1,16 +1,11 @@
 import React from "react";
-import Loading from "./loading";
-import useFetch from "./use-fetch";
+import jokesResource from "./jokes-resource";
 
 type Joke = { id: number; joke: string };
 type JokesProps = { url: string };
 
 const Jokes: React.FC<JokesProps> = ({ url }) => {
-  const { loading, data: jokes } = useFetch<Joke[]>(url);
-
-  if (loading || !jokes) {
-    return <Loading />;
-  }
+  const jokes = jokesResource.read(url) as Joke[];
 
   return (
     <div>
